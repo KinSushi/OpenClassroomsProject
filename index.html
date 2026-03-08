@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reservia — Agence de voyage premium. Trouvez les meilleures offres d'hébergement et d'activités pour vos vacances. Réservez en ligne en quelques clics." />
+  <meta property="og:title" content="Reservia — Trouvez votre hébergement de rêve" />
+  <meta property="og:description" content="Agence de voyage premium. Hébergements, activités, séjours sur mesure." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200" />
+  <meta property="og:type" content="website" />
+  <title>Reservia — Trouvez votre hébergement de rêve</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======= HEADER / NAV ======= -->
+  <header class="header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a href="#" class="nav__logo" aria-label="Reservia — Accueil">
+        <span class="nav__logo-dot"></span>
+        Reservia
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#hebergements" class="nav__link">Hébergements</a></li>
+        <li><a href="#activites" class="nav__link">Activités</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Nous contacter</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ======= HERO ======= -->
+    <section class="hero" aria-label="Section principale">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Découvrez le monde autrement</p>
+        <h1 class="hero__title">Trouvez votre<br><em>hébergement</em><br>de rêve</h1>
+        <p class="hero__subtitle">Des milliers d'offres sélectionnées pour vous, partout dans le monde. Réservez en quelques clics.</p>
+
+        <!-- SEARCH FORM -->
+        <form class="search" role="search" aria-label="Rechercher un hébergement">
+          <div class="search__field">
+            <label for="search-location" class="search__label">Destination</label>
+            <div class="search__input-wrap">
+              <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+              <input type="text" id="search-location" name="location" class="search__input" placeholder="Marseille, France" autocomplete="off" />
+            </div>
+          </div>
+          <div class="search__field">
+            <label for="search-dates" class="search__label">Dates</label>
+            <div class="search__input-wrap">
+              <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <input type="text" id="search-dates" name="dates" class="search__input" placeholder="12 juil. — 19 juil." />
+            </div>
+          </div>
+          <div class="search__field">
+            <label for="search-guests" class="search__label">Voyageurs</label>
+            <div class="search__input-wrap">
+              <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              <input type="number" id="search-guests" name="guests" class="search__input" placeholder="2 voyageurs" min="1" max="20" />
+            </div>
+          </div>
+          <button type="submit" class="search__btn" aria-label="Lancer la recherche">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <span>Rechercher</span>
+          </button>
+        </form>
+
+        <!-- FILTERS -->
+        <div class="filters" aria-label="Filtres de recherche">
+          <span class="filters__label">Filtres :</span>
+          <div class="filters__list" role="list">
+            <button class="filter-tag" role="listitem" aria-pressed="false">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              Économique
+            </button>
+            <button class="filter-tag" role="listitem" aria-pressed="false">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              Familial
+            </button>
+            <button class="filter-tag" role="listitem" aria-pressed="false">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
+              Animaux admis
+            </button>
+            <button class="filter-tag" role="listitem" aria-pressed="false">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2z"/></svg>
+              Piscine
+            </button>
+            <button class="filter-tag" role="listitem" aria-pressed="false">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+              WiFi inclus
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= HÉBERGEMENTS + POPULAIRES ======= -->
+    <section class="section-split container" id="hebergements">
+      <div class="hebergements">
+        <h2 class="section-title">Hébergements à Marseille</h2>
+        <p class="section-subtitle">Plus de 480 résultats disponibles</p>
+
+        <div class="cards-grid">
+
+          <article class="card">
+            <a href="#" class="card__link" aria-label="Voir l'offre : Hôtel Le Soleil d'Or">
+              <div class="card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=250&fit=crop" alt="Chambre lumineuse avec vue mer à l'Hôtel Le Soleil d'Or" class="card__img" loading="lazy" />
+                <span class="card__badge">Coup de cœur</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Hôtel Le Soleil d'Or</h3>
+                <p class="card__price">Nuit à partir de <strong>120 €</strong></p>
+                <div class="card__stars" aria-label="Note : 4 étoiles sur 5">
+                  <span aria-hidden="true">★★★★☆</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#" class="card__link" aria-label="Voir l'offre : Villa Calanques">
+              <div class="card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=250&fit=crop" alt="Piscine extérieure avec vue sur les calanques à la Villa Calanques" class="card__img" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Villa Calanques</h3>
+                <p class="card__price">Nuit à partir de <strong>245 €</strong></p>
+                <div class="card__stars" aria-label="Note : 5 étoiles sur 5">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#" class="card__link" aria-label="Voir l'offre : Appart Vieux-Port">
+              <div class="card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=250&fit=crop" alt="Appartement moderne avec vue sur le Vieux-Port de Marseille" class="card__img" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Appart' Vieux-Port</h3>
+                <p class="card__price">Nuit à partir de <strong>85 €</strong></p>
+                <div class="card__stars" aria-label="Note : 3 étoiles sur 5">
+                  <span aria-hidden="true">★★★☆☆</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#" class="card__link" aria-label="Voir l'offre : Bastide Provençale">
+              <div class="card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=250&fit=crop" alt="Bastide de charme en Provence avec jardin" class="card__img" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Bastide Provençale</h3>
+                <p class="card__price">Nuit à partir de <strong>190 €</strong></p>
+                <div class="card__stars" aria-label="Note : 4 étoiles sur 5">
+                  <span aria-hidden="true">★★★★☆</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#" class="card__link" aria-label="Voir l'offre : Résidence du Port">
+              <div class="card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&h=250&fit=crop" alt="Studio élégant au cœur du quartier du port" class="card__img" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Résidence du Port</h3>
+                <p class="card__price">Nuit à partir de <strong>70 €</strong></p>
+                <div class="card__stars" aria-label="Note : 3 étoiles sur 5">
+                  <span aria-hidden="true">★★★☆☆</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#" class="card__link" aria-label="Voir l'offre : Le Mas des Oliviers">
+              <div class="card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&h=250&fit=crop" alt="Mas provençal entouré d'oliviers" class="card__img" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Le Mas des Oliviers</h3>
+                <p class="card__price">Nuit à partir de <strong>155 €</strong></p>
+                <div class="card__stars" aria-label="Note : 5 étoiles sur 5">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+        </div>
+
+        <a href="#" class="btn-more">Afficher plus d'hébergements</a>
+      </div>
+
+      <!-- POPULAIRES -->
+      <aside class="populaires" aria-label="Les plus populaires">
+        <h2 class="section-title">Les plus populaires</h2>
+        <p class="section-subtitle">Sélection de la semaine</p>
+
+        <div class="populaires__list">
+
+          <article class="card card--horizontal">
+            <a href="#" class="card__link" aria-label="Voir l'offre : Hôtel Bonne Mère">
+              <div class="card__img-wrap card__img-wrap--sm">
+                <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=200&h=200&fit=crop" alt="Hôtel Bonne Mère avec vue panoramique sur Marseille" class="card__img" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Hôtel Bonne Mère</h3>
+                <p class="card__price">À partir de <strong>95 €</strong> / nuit</p>
+                <div class="card__stars" aria-label="Note : 4 étoiles sur 5">
+                  <span aria-hidden="true">★★★★☆</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card card--horizontal">
+            <a href="#" class="card__link" aria-label="Voir l'offre : La Corniche Suite">
+              <div class="card__img-wrap card__img-wrap--sm">
+                <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=200&h=200&fit=crop" alt="Suite luxueuse sur la Corniche de Marseille" class="card__img" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">La Corniche Suite</h3>
+                <p class="card__price">À partir de <strong>310 €</strong> / nuit</p>
+                <div class="card__stars" aria-label="Note : 5 étoiles sur 5">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card card--horizontal">
+            <a href="#" class="card__link" aria-label="Voir l'offre : Studio Les Goudes">
+              <div class="card__img-wrap card__img-wrap--sm">
+                <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=200&h=200&fit=crop" alt="Studio cosy dans le village des Goudes" class="card__img" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Studio Les Goudes</h3>
+                <p class="card__price">À partir de <strong>65 €</strong> / nuit</p>
+                <div class="card__stars" aria-label="Note : 4 étoiles sur 5">
+                  <span aria-hidden="true">★★★★☆</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card card--horizontal">
+            <a href="#" class="card__link" aria-label="Voir l'offre : Villa Pharo">
+              <div class="card__img-wrap card__img-wrap--sm">
+                <img src="https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?w=200&h=200&fit=crop" alt="Villa Pharo avec terrasse et vue mer" class="card__img" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Villa Pharo</h3>
+                <p class="card__price">À partir de <strong>275 €</strong> / nuit</p>
+                <div class="card__stars" aria-label="Note : 5 étoiles sur 5">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card card--horizontal">
+            <a href="#" class="card__link" aria-label="Voir l'offre : Logement Panier">
+              <div class="card__img-wrap card__img-wrap--sm">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=200&h=200&fit=crop" alt="Appartement typique dans le quartier du Panier" class="card__img" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Logement Panier</h3>
+                <p class="card__price">À partir de <strong>55 €</strong> / nuit</p>
+                <div class="card__stars" aria-label="Note : 3 étoiles sur 5">
+                  <span aria-hidden="true">★★★☆☆</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </aside>
+    </section>
+
+    <!-- ======= ACTIVITÉS ======= -->
+    <section class="activites" id="activites" aria-label="Activités à Marseille">
+      <div class="container">
+        <h2 class="section-title">Activités à Marseille</h2>
+        <p class="section-subtitle">Profitez au maximum de votre séjour</p>
+
+        <div class="activites__grid">
+
+          <article class="activite-card activite-card--tall">
+            <a href="#" class="card__link" aria-label="Découvrir : Parc National des Calanques">
+              <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=700&fit=crop" alt="Randonnée dans le Parc National des Calanques, eaux turquoise et falaises blanches" class="activite-card__img" loading="lazy" />
+              <div class="activite-card__overlay">
+                <h3 class="activite-card__title">Parc National des Calanques</h3>
+              </div>
+            </a>
+          </article>
+
+          <div class="activites__col">
+            <article class="activite-card">
+              <a href="#" class="card__link" aria-label="Découvrir : Visite du Vieux-Port">
+                <img src="https://images.unsplash.com/photo-1572204097183-e1ab140342ed?w=600&h=300&fit=crop" alt="Bateaux colorés amarrés dans le Vieux-Port de Marseille" class="activite-card__img" loading="lazy" />
+                <div class="activite-card__overlay">
+                  <h3 class="activite-card__title">Visite du Vieux-Port</h3>
+                </div>
+              </a>
+            </article>
+            <article class="activite-card">
+              <a href="#" class="card__link" aria-label="Découvrir : Soirée bouillabaisse">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&h=300&fit=crop" alt="Bouillabaisse traditionnelle servie dans un restaurant marseillais" class="activite-card__img" loading="lazy" />
+                <div class="activite-card__overlay">
+                  <h3 class="activite-card__title">Soirée bouillabaisse</h3>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <div class="activites__col">
+            <article class="activite-card">
+              <a href="#" class="card__link" aria-label="Découvrir : Sortie en kayak de mer">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop" alt="Kayak de mer dans les calanques au coucher du soleil" class="activite-card__img" loading="lazy" />
+                <div class="activite-card__overlay">
+                  <h3 class="activite-card__title">Sortie en kayak de mer</h3>
+                </div>
+              </a>
+            </article>
+            <article class="activite-card">
+              <a href="#" class="card__link" aria-label="Découvrir : Musée d'Art Contemporain">
+                <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=600&h=300&fit=crop" alt="Exposition d'art contemporain dans un musée marseillais" class="activite-card__img" loading="lazy" />
+                <div class="activite-card__overlay">
+                  <h3 class="activite-card__title">Musée d'Art Contemporain</h3>
+                </div>
+              </a>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo footer__logo" aria-label="Reservia — Accueil">
+          <span class="nav__logo-dot"></span>Reservia
+        </a>
+        <p class="footer__tagline">Votre voyage de rêve commence ici.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="À propos de Reservia">
+        <h3 class="footer__heading">À propos</h3>
+        <ul class="footer__list" role="list">
+          <li><a href="#" class="footer__link">Notre histoire</a></li>
+          <li><a href="#" class="footer__link">Recrutement</a></li>
+          <li><a href="#" class="footer__link">Presse</a></li>
+          <li><a href="#" class="footer__link">Blog voyage</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Nos services">
+        <h3 class="footer__heading">Nos services</h3>
+        <ul class="footer__list" role="list">
+          <li><a href="#" class="footer__link">Hébergements</a></li>
+          <li><a href="#" class="footer__link">Activités</a></li>
+          <li><a href="#" class="footer__link">Transferts</a></li>
+          <li><a href="#" class="footer__link">Assurance voyage</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Aide et légal">
+        <h3 class="footer__heading">Aide & Légal</h3>
+        <ul class="footer__list" role="list">
+          <li><a href="#" class="footer__link">Centre d'aide</a></li>
+          <li><a href="#" class="footer__link">CGU</a></li>
+          <li><a href="#" class="footer__link">Politique de confidentialité</a></li>
+          <li><a href="#" class="footer__link">Mentions légales</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__bottom container">
+      <p class="footer__copy">© 2026 Reservia. Tous droits réservés.</p>
+      <p class="footer__credit">Projet OpenClassrooms — Parcours Développeur WordPress</p>
+    </div>
+  </footer>
+
+  <script>
+    // Burger menu toggle
+    const burger = document.querySelector('.nav__burger');
+    const navLinks = document.querySelector('.nav__links');
+    burger.addEventListener('click', () => {
+      const isOpen = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', !isOpen);
+      navLinks.classList.toggle('nav__links--open');
+    });
+
+    // Filter tags toggle
+    document.querySelectorAll('.filter-tag').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const pressed = btn.getAttribute('aria-pressed') === 'true';
+        btn.setAttribute('aria-pressed', !pressed);
+        btn.classList.toggle('filter-tag--active');
+      });
+    });
+  </script>
+
+</body>
+</html>
