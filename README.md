@@ -1,10 +1,17 @@
 <!-- ═══════════════════════════════════════════════════════════
      KinSushi/OpenClassroomsProject — Web Development Portfolio
      Parcours Developpeur WordPress · RNCP38145
-     Part of the SOVRALYS 9-year trajectory: Web Dev > ML Engineer > Quant
+     Part of a broader Data / MLOps engineering trajectory
      ═══════════════════════════════════════════════════════════ -->
 
+<div align="center">
+
+<img src="assets/openclassrooms-banner.svg" alt="OpenClassrooms web development portfolio banner" width="100%"/>
+
+<br/>
+
 # Web Development Portfolio
+
 ## OpenClassrooms — Parcours Developpeur WordPress · RNCP38145
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
@@ -14,8 +21,15 @@
 ![GitHub Pages](https://img.shields.io/badge/Demo-GitHub_Pages-222222?style=flat-square&logo=github&logoColor=white)
 ![OpenClassrooms](https://img.shields.io/badge/OpenClassrooms-RNCP38145-blueviolet?style=flat-square)
 
-This repository documents the complete **OpenClassrooms Web Developer WordPress path** (RNCP38145), built as Phase 1 of the [SOVRALYS](https://github.com/KinSushi) 9-year trajectory toward ML Engineering and Quantitative Finance.
-Each project is a production-ready deliverable — semantic HTML5, pure CSS, and eventually JavaScript and WordPress — with no frameworks until they become the point.
+</div>
+
+---
+
+## Purpose
+
+This repository documents the **OpenClassrooms Web Developer WordPress path** (RNCP38145) as a public web-development portfolio.
+
+It supports a broader **Data / MLOps engineering trajectory** by proving delivery discipline, semantic HTML, responsive CSS, accessibility awareness, project documentation and Git workflow foundations.
 
 ---
 
@@ -37,24 +51,37 @@ Each project is a production-ready deliverable — semantic HTML5, pure CSS, and
 
 ---
 
-## Project 03 — Reservia (Active)
+## Project 03 — Reservia
 
-**Live demo** : [https://kinsushi.github.io/OpenClassroomsProject/](https://kinsushi.github.io/OpenClassroomsProject/)
+**Live demo**: [https://kinsushi.github.io/OpenClassroomsProject/](https://kinsushi.github.io/OpenClassroomsProject/)
 
 Key technical decisions:
-- 12 CSS custom properties (colors, spacing) in `:root` — single source of truth
-- Mobile-first: base styles for 320px, breakpoints at 768px · 1024px · 1200px
-- Semantic HTML5: header, nav, main, section, article, footer
-- Filter buttons with `aria-pressed` for screen reader accessibility
-- 4-column footer with responsive column stacking
 
-```
+- 12 CSS custom properties in `:root` for a single source of truth;
+- mobile-first layout: base styles for 320px, breakpoints at 768px, 1024px and 1200px;
+- semantic HTML5: header, nav, main, section, article, footer;
+- filter buttons with `aria-pressed` for screen reader accessibility;
+- responsive footer layout with column stacking.
+
+```text
 OpenClassroomsProject/
-├── index.html         # Reservia — full semantic structure
-├── styles.css         # CSS Variables + mobile-first responsive
-├── images/            # Visual assets (to be added)
-└── README.md          # This file
+├── index.html         # Reservia — semantic structure
+├── styles.css         # CSS variables + mobile-first responsive layout
+├── images/            # Visual assets
+└── README.md          # Portfolio documentation
 ```
+
+---
+
+## Why this matters for Data / MLOps roles
+
+| Web-development evidence | Transferable engineering signal |
+|---|---|
+| Semantic HTML and accessibility | User-facing dashboard and documentation awareness |
+| Responsive CSS | Product polish and cross-device testing |
+| GitHub Pages demo | Public delivery and deployment habit |
+| Conventional Commits | Professional workflow discipline |
+| Project documentation | Clear handover and reproducibility mindset |
 
 ---
 
@@ -83,14 +110,17 @@ Full workflow reference: [KinSushi/git-workflow-demo](https://github.com/KinSush
 | Certification | Program | Timeline |
 |---|---|---|
 | **RNCP38145** — Developpeur Web WordPress | OpenClassrooms | 2025–2026 |
-| **RNCP7 + RNCP6** — Data Science & AI | Jedha Bootcamp Paris | From April 13, 2026 |
+| **RNCP Level 6 / Level 7 track** — Data Science & AI | Jedha | 2026 |
 
-> This portfolio is **Phase 1** of the SOVRALYS trajectory.
-> Phase 2 starts April 2026 — Jedha Bootcamp Paris — Python · ML · MLOps · AWS.
+---
+
+## Public-safety note
+
+This repository is public technical evidence. It does not contain CVs, application letters, salary targets, private school documents or employer-specific application material.
 
 ---
 
 ## Author
 
-**Enzo · KinSushi** · Founder @ SOVRALYS LLC · Panama City
+**Enzo · KinSushi**  
 [GitHub Profile](https://github.com/KinSushi) · [LinkedIn](https://www.linkedin.com/in/enzo-c-di-bacco-074842226)
